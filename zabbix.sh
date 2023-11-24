@@ -34,7 +34,7 @@ sudo -u postgres createdb -O zabbix zabbix
 
 zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
 
-echo 
+#echo 
 
 #nano /etc/zabbix/zabbix_server.conf
 
