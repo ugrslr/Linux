@@ -8,8 +8,6 @@ apt update
 
 ##---------Postgre Yükleme--------##
 
-sudo apt update
-
 sudo apt install postgresql postgresql-contrib -y
 
 sudo systemctl start postgresql.service
@@ -24,7 +22,7 @@ sudo systemctl start postgresql.service
 
 apt install zabbix-server-pgsql zabbix-frontend-php php8.1-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent -y
 
-chmod 777 /home/$user
+chmod 777 /home/$USER
 
 #(Kullanıcı dizinine Full erişim yetkisi vermek gerekiyor. "satu" yazan yere, sizin kurulumda verdiğiniz user'ı vermeniz  gerekiyor. )#
 
@@ -42,13 +40,13 @@ echo
 
 # (Zabbix konfigürasyon dosyasında düzenleme yapmak için nano editörü ile erişiyoruz)
 
-DBPassword=password
+#DBPassword=password
 
 #(Burada, database kullanıcısı oluştururken verdiğimiz şifreyi giriyoruz.)#
 
-systemctl restart zabbix-server zabbix-agent apache2
+#systemctl restart zabbix-server zabbix-agent apache2
 
-systemctl enable zabbix-server zabbix-agent apache2
+#systemctl enable zabbix-server zabbix-agent apache2
 
 
 
