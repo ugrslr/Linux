@@ -1,5 +1,9 @@
 #! /bin/bash
 
+echo "DB kullanıcısı için vermiş olduğunuz şifreyi bir daha girin:"
+
+read dbpswd
+
 ##---------Zabbix Paketi İndirme----------##
 
 wget https://github.com/ugrslr/Linux/raw/main/zabbix-6-4-1-ubuntu-22-04-all.deb
@@ -23,10 +27,6 @@ chmod 777 $HOME
 #-----------Create initial database----------------#
 
 sudo -u postgres createuser zabbix -P
-
-echo "DB kullanıcısı için vermiş olduğunuz şifreyi bir daha girin:"
-
-read dbpswd
 
 sudo -u postgres createdb -O zabbix zabbix
 
